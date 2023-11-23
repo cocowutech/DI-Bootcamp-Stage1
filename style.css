@@ -158,3 +158,29 @@ header .logo:hover{
 		font-size: 2em;
 	}
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .showcase {
+        padding: 50px;
+    }
+    .text h2 {
+        font-size: 2.5em;
+    }
+    .text h3 {
+        font-size: 2em;
+    }
+    .text p {
+        font-size: 0.9em;
+        max-width: 100%;
+    }
+    .text a {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+    .Menu {
+        bottom: 10px; 
+    }
+}
