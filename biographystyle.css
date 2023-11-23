@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+section{
+	width: 100%;
+	height:100vh;
+	padding: 80px;
+	background:rgba(0, 0, 0);
+	color: #fff;
+}
+
+.navbar{
+	position: fixed;
+	top: 0;
+	z-index: 1100;
+	display: flex;
+	width: 100%;
+	height: 60px;
+	background:rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	width: 100%;
+	justify-content: center;
+}
+
+.navbar ul li{
+	margin:0 1rem;
+	padding:1rem;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 2px 2px 5px whitesmoke;
+}
+
+.navbar ul li a:hover{
+	color:#FFC629;
+}
+
+/* Biography */
+
+#biography{
+	padding: 80px 0;
+	margin: 0;
+	overflow: visible;
+	color: #fff;
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.biopic{
+	flex-basis: 30%;
+}
+
+.biopic img{
+	margin-left: 30px;
+	width: 90%;
+	min-height: auto;
+	border-radius: 15px;
+}
+
+.biotext{
+	flex-basis: 65%;
+}
+
+.biotext-title{
+	font-size: 60px;
+	text-align: center;
+}
+
+.biotext-text{
+	font-size:1rem ;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: gainsboro;
+}
+
+.tab-titles{
+	display: flex;
+	justify-content: space-around;
+	margin: 2rem 0 1rem;
+}
+
+.tab-links{
+	margin:0 50px;
+	font-size: 18px;
+	cursor: pointer;
+	position: relative;
+}
+.tab-links::after{
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #FFC629;
+	position: absolute;
+	left: 0;
+	bottom: -0px;
+	transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+	width: 50%;
+}
+
+.tab-contents{
+	margin:30px 90px;
+	font-size: 1.2rem;
+	display: none;
+}
+
+.tab-contents.active-tab{
+	display: block;
+}
+
+/* Tailored Sessions */
+#session{
+	padding:-30px 0px;
+}
+
+.session-main-title{
+	font-size: 60px;
+	color: #fff;
+}
+
+.session-sub-title{
+	font-size:30px;
+	font-style: oblique;
+	color: #fff;
+}
+
+.session-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+	margin-right: 90px;
+	padding: 20px;
+}
+
+.session-list div{
+	background-color:#fff;
+	color:black;
+	border-radius: 15px;
+	transition:background 0.5s ,transform 0.5s;
+	cursor: pointer;
+}
+
+.session-list div i{
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.session-list div:hover{
+	background: #FFC629;
+	transform: translateY(-10px);
+}
+
+/* Book My Seat Now */
+#contact h2{
+	font-size: 60px;
+	color: #fff;
+}
+form input, form textarea{
+	width: 90%;
+	border: 0;
+	outline: none;
+	background: #fff;
+	padding: 15px;
+	margin: 15px;
+	border-radius:10px;
+}
+
+.contact-form button{
+	background: white;
+	color: black;
+	padding: 10px;
+	margin: 15px;
+	display: inline-block;
+	font-size: 15px;
+	border-radius:10px;
+	outline: none;
+	transition:background 0.5s;
+}
+
+.contact-form button:hover{
+	background: #FFC629;
+}
+
+@media screen and (max-width: 768px) {
+	section{
+		height:auto;
+	}
+    .biopic, .biotext {
+        flex-basis: 100%;
+    }
+
+	.biopic{
+		margin-top: 0;
+	}
+
+    .biopic img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .biotext-title {
+        font-size: 40px;
+    }
+
+    .session-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .tab-links {
+        margin: 0 20px;
+    }
+
+    .tab-contents {
+        margin: 30px;
+    }
+
+    .session-main-title, #contact h2 {
+        font-size: 40px;
+    }
+
+    .session-sub-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul li {
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .biotext-text, .tab-links {
+        font-size: 0.9rem;
+    }
+
+    .session-list {
+        grid-gap: 20px;
+        margin-right: 30px;
+    }
+
+    .contact-form button {
+        font-size: 13px;
+    }
+}

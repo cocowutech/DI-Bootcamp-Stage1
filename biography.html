@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="biographystyle.css">
+    <script src="https://kit.fontawesome.com/a767f11702.js" crossorigin="anonymous"></script>
+    <title>Biography</title>
+</head>
+
+<body>
+    <nav class="navbar">
+       <ul>
+        <li><a href="index.html">Whitney Home</a></li>
+        <li><a href="#biography">Journey of a founder</a></li>
+        <li><a href="#session">Tailored Sessions</a></li>
+        <li><a href="#contact">Book My Seat Now</a></li>
+       </ul> 
+    </nav>
+
+<!-- Biography -->
+  <section id="biography">
+    <div class="row">
+      <div class="biopic">
+        <img src="whitney_wolfe_tfs_blog_post.webp">
+      </div>
+
+      <div class="biotext">
+        <h2 class="biotext-title">Whitney Wolfe Herd</h2>
+        <p class="biotext-text"> In 2014, she founded Bumble, a dating app empowering women to make the first move. Under her leadership, Bumble grew rapidly, challenging industry norms and championing female empowerment. Wolfe Herd became the world's youngest self-made female billionaire when Bumble went public in 2021. Her success symbolizes a significant shift in the tech industry, highlighting the importance of women in leadership roles.</p>
+    
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('Education')">Early Life and Education</p>
+          <p class="tab-links" onclick="opentab('Career Beginnings')">Tinder? Bumble!</p>
+          <p class="tab-links" onclick="opentab('Bumble Success')">Bumble Success</p>
+          <p class="tab-links" onclick="opentab('IPO and Beyond')">IPO and Beyond</p>
+        </div>
+    
+        <div class="tab-contents active-tab" id="Education">
+          <p>Whitney Wolfe Herd, born in 1989 in Salt Lake City, Utah, is an American entrepreneur who revolutionized the online dating industry. She attended Southern Methodist University, majoring in International Studies. </p>
+        </div>
+
+        <div class="tab-contents" id="Career Beginnings">
+          <p>After completing her studies, Whitney Wolfe Herd embarked on her career in the tech industry.She co-founded Tinder, a popular dating app, in 2012. In 2014, Whitney left Tinder and went on to co-found Bumble</p>
+        </div>
+
+        <div class="tab-contents" id="Bumble Success">
+          <p>Under Whitney Wolfe Herd's leadership, Bumble experienced rapid growth and success.Bumble expanded its offerings beyond dating to include features like Bumble BFF for making friends and Bumble Bizz for networking.</p>
+        </div>
+
+        <div class="tab-contents" id="IPO and Beyond">
+          <p>Bumble went public with an initial public offering (IPO) in February 2021, marking a significant milestone for the company.Whitney Wolfe Herd became one of the youngest female CEOs to take a company public.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- sessions -->
+  <section id="session">
+    <h2 class="session-main-title">Upcoming Sessions</h2>
+    <h3 class="session-sub-title">Become Who You Are Inspired To Be</h3>
+
+    <div class="session-list">
+      <div>
+        <i class="fa-brands fa-sketch"></i>
+        <h2>Entrepreneurship and Start-up Strategy</h2>
+        <p> Sharing insights on identifying market needs, developing business models, securing funding, and navigating the challenges of starting and scaling a business in the competitive tech industry.</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-fire"></i>
+        <h2>Brand Building and Marketing</h2>
+        <p>Valuable lessons in crafting a strong brand identity, effective marketing strategies, and public relations.</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-crown"></i>
+        <h2>Leadership in Tech</h2>
+        <p>As a successful female leader in a predominantly male industry, Wolfe Herd could offer guidance on leadership, team building, and fostering an inclusive and productive workplace culture.</p>
+      </div>
+    </div>
+  </section> 
+
+
+  <section id="contact">
+    <h2>Your Success,<br>Our Obsession</h2>
+    <div class="contact-form">
+      <form action="">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit">Reserve My Spot</button>
+      </form>
+
+
+    </div>
+  </section> 
+
+
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links")
+  var tabcontents = document.getElementsByClassName("tab-contents")
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+</body>
+</html>
